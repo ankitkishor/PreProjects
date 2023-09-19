@@ -1,0 +1,25 @@
+class Scratch {
+    public static void main(String[] args) {
+        System.out.println("Alexa Echo Dot ");
+        System.out.println("==============\n");
+        int size = 100;
+        double weight = 341.3;
+        double wifiMinGHz = 2.4;
+        double wifiMaxGHz = 5;
+        double bluetoothVersion = 5.0;
+        boolean bluetooth = true;
+        int generation = 4;
+        System.out.println("Size is- " +
+                size + " X " + size + " X " + size + " mm.\n");
+        System.out.println("Weight is- " +
+                        weight + " grams.\n");
+        System.out.println("WiFi connectivity- " +
+                "Dual-band width "+ wifiMinGHz + " and " + wifiMaxGHz + " GHz.\n");
+        System.out.println("Bluetooth connectivity- " +
+                bluetooth + "and hand free voice control with version " + bluetoothVersion +".\n" );
+        System.out.println("Generation- " +
+                "Echo Dot ("+generation +"th Gen)" + "- 2020 release.\n");
+
+
+    }
+}

@@ -1,0 +1,40 @@
+h1{
+    margin-left: 520px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: darkblue;
+    font-weight: 500;
+    font-size: 40px;
+}
+img{
+    height: 260px;
+    width: 450px;
+    padding-left: 30px;
+}
+h2{
+    padding-left: 100px;
+    background-color: rgb(90, 84, 84);
+    color: orange;
+}
+.card{
+    margin: auto;
+    width: 500px;
+    box-shadow: 5px 5px 4px 4px grey;
+    height: 530px;
+}
+.head{
+    margin-left: 120px;
+    margin-bottom: 10px;
+    font-weight: 50px;
+    color: rgb(112, 112, 202);
+}
+.full-width{
+    width: 100%;
+}
+button{
+    margin: auto;
+}
+.subtitle{
+    margin-bottom: 50px;
+    margin-left: 100px;
+}

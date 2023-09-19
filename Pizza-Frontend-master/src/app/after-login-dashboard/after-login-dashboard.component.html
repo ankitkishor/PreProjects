@@ -1,0 +1,81 @@
+<div>
+    <h1>Welcome to the Pizza Store</h1>
+
+        <img src="https://i.pinimg.com/originals/a4/36/70/a43670c098fa0835f20ee13da3fe4214.gif"
+    alt="pizza image">
+  
+     <img src="https://img.onmanorama.com/content/dam/mm/en/food/features/images/2021/10/17/pizza.jpg"
+     alt="pizza image">
+  
+     <img src="https://c.tenor.com/h6N7ymQy2_AAAAAC/dominos-pizza.gif"
+     alt="pizza image">
+     <img src="https://media.istockphoto.com/id/938742222/photo/cheesy-pepperoni-pizza.jpg?s=612x612&w=0&k=20&c=D1z4xPCs-qQIZyUqRcHrnsJSJy_YbUD9udOrXpilNpI="
+     alt="pizza image">
+     <img src="https://img.freepik.com/free-photo/top-view-pepperoni-pizza-sliced-into-six-slices_141793-2157.jpg?w=2000"
+     alt="pizza image">
+     <img src="https://media.istockphoto.com/id/938742222/photo/cheesy-pepperoni-pizza.jpg?s=612x612&w=0&k=20&c=D1z4xPCs-qQIZyUqRcHrnsJSJy_YbUD9udOrXpilNpI="
+     alt="pizza image">
+     <br><br><br>
+
+     <form (submit)="onPlaceOrder(data.value)" #data="ngForm">
+        <mat-card class="card">
+            <mat-card-header>
+                <mat-card-title class="head">Place your pizza order</mat-card-title>
+                <mat-card-subtitle class="subtitle">Please enter details of pizza you want</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <div>
+                    <mat-form-field class="full-width">
+                        <mat-label>Enter Pizza ID</mat-label>
+                        <input matInput type="number" name="pizzaId" #pizzaId="ngModel" [(ngModel)]="pizzaForm.pizzaId" required>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field class="full-width">
+                        <mat-label>Enter Pizza Name</mat-label>
+                        <input matInput type="text"name='pizzName' #pizzaName="ngModel" [(ngModel)]="pizzaForm.pizzaName" required>
+                    </mat-form-field>
+                </div>  
+                <div>
+                    <mat-form-field class="full-width">
+                        <mat-label>Enter Topping you want</mat-label>
+                        <input matInput type="text" name='topping' #topping="ngModel" [(ngModel)]="pizzaForm.topping" required>
+                    </mat-form-field>
+                </div> 
+                <div>
+                    <mat-form-field class="full-width">
+                        <mat-label>Enter Size of Pizza</mat-label>
+                        <input matInput type="text" name='size' #size="ngModel" [(ngModel)]="pizzaForm.size" required>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field class="full-width">
+                        <mat-label>Enter no of Pizza</mat-label>
+                        <input matInput type="number" name='quantity' #quantity="ngModel" [(ngModel)]="pizzaForm.quantity" required>
+                    </mat-form-field>
+                </div>   
+            </mat-card-content>
+        </mat-card>
+    </form>
+
+    <div>
+        <button class="getorder" (click)="getAllPizzas()" mat-raised-button color="warn">Get your Orders</button>
+        <div [hidden]="!data.valid">
+            <h1>your order's</h1>
+            <h2>
+                Pizza Id : {{pizzaForm.pizzaId}}
+            </h2>
+            <h2>
+                Pizza Name : {{pizzaForm.pizzaName}}
+            </h2>
+            <h2>
+                Topping : {{pizzaForm.topping}}
+            </h2>
+             <h2>Size :  {{pizzaForm.size}}</h2>
+            <h2>Quantity :  {{pizzaForm.quantity}}</h2>
+        </div>
+        <br>
+        <button mat-raised-button color="primary"></button>
+    </div>
+   
+</div>
